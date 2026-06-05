@@ -40,8 +40,8 @@ type Props = {
 export function ScrollSection({ children, className = '', delay = 0 }: Props) {
   const ref = useRef<HTMLDivElement>(null)
 
-  /* fire once when ≥ 15 % of the section enters the viewport */
-  const inView = useInView(ref, { once: false, amount: 0.15 })
+  /* fire once — tall sections fall below the threshold again while scrolling */
+  const inView = useInView(ref, { once: true, amount: 0.08 })
 
   return (
     /* perspective wrapper — each section lives in its own 3-D context */

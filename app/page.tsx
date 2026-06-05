@@ -249,9 +249,9 @@ function BitacoraMedia({ items }: { items: MediaItem[] }) {
         items.length > 1 ? 'md:grid-cols-2' : 'grid-cols-1'
       )}
     >
-      {items.map((item) => (
+      {items.map((item, index) => (
         <figure
-          key={item.src}
+          key={`${item.src}-${index}`}
           className="rounded-xl overflow-hidden border border-slate-700/80 bg-slate-950/50"
         >
           {item.type === 'video' ? (
@@ -259,8 +259,9 @@ function BitacoraMedia({ items }: { items: MediaItem[] }) {
               src={asset(`/media/${item.src}`)}
               controls
               playsInline
-              preload="metadata"
-              className="w-full aspect-video object-cover bg-black"
+              preload="none"
+              loop={false}
+              className="w-full aspect-video object-contain bg-black"
             />
           ) : (
             <Image
@@ -541,8 +542,8 @@ export default function PhysicsProjectPage() {
         </div>
       </ScrollSection>
 
-      {/* ── 6. BITÁCORA ─────────────────────────────────────────────────────── */}
-      <ScrollSection className="py-20 px-4 max-w-4xl mx-auto border-t border-slate-800/50">
+      {/* ── 6. BITÁCORA (sin ScrollSection — sección muy alta para animación 3D) ── */}
+      <section className="py-20 px-4 max-w-4xl mx-auto border-t border-slate-800/50">
         <h2 className="text-3xl font-bold text-slate-100 mb-4 text-center flex items-center justify-center gap-3">
           <Flame className="text-blue-500" /> Bitácora de Proyecto
         </h2>
@@ -553,32 +554,15 @@ export default function PhysicsProjectPage() {
           {bitacoraIntro.plan}
         </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ type: 'spring', stiffness: 80, damping: 18 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="mb-14 max-w-2xl mx-auto"
-        >
+        <div className="mb-14 max-w-2xl mx-auto">
           <BitacoraMedia items={bitacoraIntro.media} />
-        </motion.div>
+        </div>
 
         <div className="space-y-14">
-          {bitacoraSections.map((section, sectionIdx) => {
+          {bitacoraSections.map((section) => {
             const SectionIcon = section.icon
             return (
-              <motion.div
-                key={section.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  type: 'spring',
-                  stiffness: 80,
-                  damping: 18,
-                  delay: sectionIdx * 0.05,
-                }}
-                viewport={{ once: false, amount: 0.15 }}
-              >
+              <div key={section.title}>
                 <h3 className="text-2xl font-bold text-slate-100 mb-6 flex items-center gap-3">
                   <SectionIcon className="w-6 h-6 text-blue-400 shrink-0" />
                   {section.title}
@@ -586,17 +570,8 @@ export default function PhysicsProjectPage() {
 
                 <div className="space-y-6">
                   {section.items.map((item, itemIdx) => (
-                    <motion.div
+                    <div
                       key={`${section.title}-${itemIdx}`}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{
-                        type: 'spring',
-                        stiffness: 80,
-                        damping: 18,
-                        delay: itemIdx * 0.08,
-                      }}
-                      viewport={{ once: false, amount: 0.2 }}
                       className="p-6 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-blue-500/30 transition-colors duration-300"
                     >
                       {'title' in item && item.title && (
@@ -608,14 +583,14 @@ export default function PhysicsProjectPage() {
                       {'media' in item && item.media && (
                         <BitacoraMedia items={item.media} />
                       )}
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             )
           })}
         </div>
-      </ScrollSection>
+      </section>
 
       {/* ── FOOTER ──────────────────────────────────────────────────────────── */}
       <motion.footer
