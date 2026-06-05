@@ -357,7 +357,7 @@ export default function PhysicsProjectPage() {
           Universidad Tecnológica de Pereira.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {authors.map((author, i) => (
             <motion.div
               key={author.name}
@@ -367,30 +367,32 @@ export default function PhysicsProjectPage() {
               viewport={{ once: false, amount: 0.3 }}
             >
               <Card className="bg-slate-900/50 border-slate-800 backdrop-blur-sm hover:border-blue-500/40 transition-colors duration-300 h-full">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-6">
-                    <div className="shrink-0 w-20 h-20 rounded-2xl overflow-hidden border border-slate-700 bg-slate-800">
+                <CardContent className="p-8 md:p-10">
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
+                    <div className="shrink-0 w-36 h-36 md:w-44 md:h-44 rounded-3xl overflow-hidden border-2 border-slate-700 bg-slate-800 shadow-lg shadow-blue-500/10">
                       <Image
                         src={asset(author.photo)}
                         alt={author.name}
-                        width={80}
-                        height={80}
+                        width={176}
+                        height={176}
                         unoptimized
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="space-y-3 min-w-0">
-                      <h3 className="text-xl font-bold text-slate-100 leading-snug">{author.name}</h3>
-                      <div className="flex items-center gap-2 text-slate-400 text-sm">
-                        <Cpu className="w-4 h-4 text-blue-400 shrink-0" />
+                    <div className="space-y-4 min-w-0 text-center sm:text-left flex-1">
+                      <h3 className="text-2xl md:text-3xl font-bold text-slate-100 leading-snug">
+                        {author.name}
+                      </h3>
+                      <div className="flex items-center justify-center sm:justify-start gap-3 text-slate-400 text-base">
+                        <Cpu className="w-5 h-5 text-blue-400 shrink-0" />
                         <span>{author.programa}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-slate-400 text-sm">
-                        <University className="w-4 h-4 text-blue-400 shrink-0" />
+                      <div className="flex items-center justify-center sm:justify-start gap-3 text-slate-400 text-base">
+                        <University className="w-5 h-5 text-blue-400 shrink-0" />
                         <span>{author.universidad}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-slate-400 text-sm">
-                        <BookOpen className="w-4 h-4 text-blue-400 shrink-0" />
+                      <div className="flex items-center justify-center sm:justify-start gap-3 text-slate-400 text-base">
+                        <BookOpen className="w-5 h-5 text-blue-400 shrink-0" />
                         <span>{author.curso}</span>
                       </div>
                     </div>
