@@ -8,16 +8,18 @@ import {
   useSpring,
 } from 'framer-motion'
 
+import Image from 'next/image'
+
 import { SplineScene } from '@/components/ui/splite'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { ScrollSection } from '@/components/ui/scroll-section'
+import { asset, cn } from '@/lib/utils'
 import {
   Construction,
   Zap,
   Magnet,
   Battery,
-  User,
   GraduationCap,
   BookOpen,
   University,
@@ -25,21 +27,32 @@ import {
   Cpu,
   Lightbulb,
   History,
+  Wrench,
+  Flame,
+  Puzzle,
 } from 'lucide-react'
 
 /* ─────────────────────────────────────────────────────────────────────────────
    DATA
 ───────────────────────────────────────────────────────────────────────────── */
 
+type MediaItem = {
+  src: string
+  type: 'image' | 'video'
+  caption?: string
+}
+
 const authors = [
   {
     name: 'Santiago Guerra Puertas',
+    photo: '/media/Santiago.jpg',
     programa: 'Ingeniería de Sistemas y Computación',
     universidad: 'Universidad Tecnológica de Pereira',
     curso: 'Física 2',
   },
   {
     name: 'Daniel Felipe Riaño Hernández',
+    photo: '/media/Daniel.jpeg',
     programa: 'Ingeniería de Sistemas y Computación',
     universidad: 'Universidad Tecnológica de Pereira',
     curso: 'Física 2',
@@ -102,28 +115,173 @@ const principios = [
   },
 ]
 
-const bitacora = [
+const bitacoraIntro = {
+  title: 'Nuestro Motor Eléctrico Casero (y la odisea para hacerlo girar)',
+  plan:
+    'El Plan: Armar un motorcito casero de corriente continua siguiendo un tutorial de YouTube, aplicar lo que vimos en clase y no rendirnos en el intento.',
+  media: [
+    {
+      src: 'Together.jpeg',
+      type: 'image' as const,
+      caption: 'El equipo en plena sesión de experimentación',
+    },
+  ],
+}
+
+const bitacoraSections = [
   {
-    step: 1,
-    title: 'Preparación de la Bobina',
-    body: 'Se enrolló alambre de cobre esmaltado firmemente. Se dejaron dos extremos rectos como ejes. Se lijó completamente el esmalte de un extremo, y solo la mitad del otro para crear el efecto conmutador.',
+    icon: Wrench,
+    title: '1. ¿Qué usamos? (Los Materiales)',
+    items: [
+      {
+        body: 'Pila de 9V y cables comunes.',
+      },
+      {
+        body: 'Clips tamaño "jumbo": Los modificamos para que sirvieran de "cama" o soporte para la bobina.',
+      },
+      {
+        body: 'Alambre esmaltado: Compramos calibre 20 y 24 por si las dudas.',
+      },
+      {
+        body: 'El Imán: ¡Costó la vida conseguirlo! Terminamos yendo al centro y un viejito nos vendió uno que sacó de un estéreo de los viejos. Una verdadera joya.',
+        media: [
+          {
+            src: 'Bulding.jpeg',
+            type: 'image' as const,
+            caption: 'Montaje inicial con pila, clips y bobina',
+          },
+        ],
+      },
+    ],
   },
   {
-    step: 2,
-    title: 'Soportes y Base',
-    body: 'Se montaron dos clips conductores sobre la base para servir como soporte estructural y contactos eléctricos. Se aseguraron de estar nivelados para reducir la fricción mecánica al mínimo.',
+    icon: Construction,
+    title: '2. El Proceso (Entre el caos y el éxito)',
+    items: [
+      {
+        title: 'Fase 1: El problema del grosor',
+        body: 'Armamos la base con los clips y la pila. Hicimos nuestra primera bobina con el alambre calibre 20, la pusimos en los clips y... nada. Cero movimiento. Pensamos que era muy grueso y pesado, así que armamos otra con el calibre 24. ¿El resultado? Tampoco se movió.',
+        media: [
+          {
+            src: 'FailAtemp.mp4',
+            type: 'video' as const,
+            caption: 'Primer intento: cero movimiento',
+          },
+        ],
+      },
+      {
+        title: 'Fase 2: La lija asesina y la bobina epiléptica',
+        body: 'Después de revisar bien, nos dimos cuenta de nuestro error de novatos: no sabíamos pelar el alambre esmaltado, así que obvio no pasaba corriente. Nos pusimos a lijarlo. Casi perdimos un dedo en el proceso, pero al menos la cosa dio señales de vida. La bobina empezó a tambalear rarísimo, como si tuviera un ataque de epilepsia. A veces hasta se quedaba flotando, totalmente congelada por el imán.',
+        media: [
+          {
+            src: 'PorloMenosSeMueve.mp4',
+            type: 'video' as const,
+            caption: 'Por lo menos se mueve… un poco',
+          },
+          {
+            src: 'SeQuedoTieso.mp4',
+            type: 'video' as const,
+            caption: 'Se quedó tieso, congelado por el imán',
+          },
+        ],
+      },
+      {
+        title: 'Fase 3: La culpa es de los clips',
+        body: 'Como seguía sin girar bien, le echamos la culpa a los clips. Los teníamos en forma de gancho abierto, así que los cerramos para dejar solo un huequito donde encajaran las puntas de la bobina. Spoiler: no surtió ningún efecto.',
+        media: [
+          {
+            src: 'Work.mp4',
+            type: 'video' as const,
+            caption: 'Ajustando los clips sin mucho éxito',
+          },
+        ],
+      },
+      {
+        title: 'Fase 4: Fuego, la vieja confiable',
+        body: 'Vimos por ahí que era mejor quemar el esmalte con fuego y después lijarlo suavemente. Lo intentamos, lo pusimos en los clips y ¡listo! Funcionó perfecto. Grito de victoria y experimento "completado".',
+        media: [
+          {
+            src: 'FirstTImeWork.mp4',
+            type: 'video' as const,
+            caption: '¡La primera vez que giró de verdad!',
+          },
+        ],
+      },
+    ],
   },
   {
-    step: 3,
-    title: 'Integración del Imán',
-    body: 'Se colocó un imán circular permanentemente debajo de la bobina. Se ajustó la altura para maximizar el campo magnético sin obstruir la rotación física del cobre.',
-  },
-  {
-    step: 4,
-    title: 'Prueba y Encendido',
-    body: 'Se conectaron los caimanes desde la fuente de poder a los clips. Con un ligero empuje manual para romper la inercia, se logró una rotación estable y continua de alto torque.',
+    icon: Puzzle,
+    title: '3. Jugando a ser ingenieros (O por qué no arreglar lo que no está roto)',
+    items: [
+      {
+        title: 'El intento de "Mejorar" el conmutador',
+        body: 'Como ya servía, nos pusimos a jugar tratando de aplicar los conceptos de la clase. Sobra decir que casi nos quedamos sin proyecto: quisimos optimizar la parte del alambre pelado que hace contacto (el conmutador). Al "mejorarla", el motor dejó de servir. Después de molestar un buen rato, logramos que reviviera haciendo un Frankenstein con los clips: dejamos uno en forma de gancho y el otro en forma de hueco. Así le gustó.',
+        media: [
+          {
+            src: 'Working.mp4',
+            type: 'video' as const,
+            caption: 'El motor funcionando después del arreglo Frankenstein',
+          },
+        ],
+      },
+      {
+        title: 'Buscando el "Punto Máximo"',
+        body: 'No conformes con que ya girara, queríamos más potencia. Subimos la altura de los clips para "llegar al punto máximo del campo magnético" del imán. ¡Oh sorpresa!, se volvió a morir. Después de pelear otro rato con los clips, logramos que volviera a funcionar y ahí sí, quietecito, lo dejamos en paz y dimos por hecho el experimento. ¡Misión cumplida!',
+        media: [
+          {
+            src: 'Working.mp4',
+            type: 'video' as const,
+            caption: 'Misión cumplida: el motor girando estable',
+          },
+        ],
+      },
+    ],
   },
 ]
+
+function BitacoraMedia({ items }: { items: MediaItem[] }) {
+  if (!items.length) return null
+
+  return (
+    <div
+      className={cn(
+        'mt-4 grid gap-4',
+        items.length > 1 ? 'md:grid-cols-2' : 'grid-cols-1'
+      )}
+    >
+      {items.map((item) => (
+        <figure
+          key={item.src}
+          className="rounded-xl overflow-hidden border border-slate-700/80 bg-slate-950/50"
+        >
+          {item.type === 'video' ? (
+            <video
+              src={asset(`/media/${item.src}`)}
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full aspect-video object-cover bg-black"
+            />
+          ) : (
+            <Image
+              src={asset(`/media/${item.src}`)}
+              alt={item.caption ?? ''}
+              width={800}
+              height={500}
+              unoptimized
+              className="w-full object-cover"
+            />
+          )}
+          {item.caption && (
+            <figcaption className="text-xs text-slate-500 px-3 py-2 text-center border-t border-slate-800">
+              {item.caption}
+            </figcaption>
+          )}
+        </figure>
+      ))}
+    </div>
+  )
+}
 
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE
@@ -210,8 +368,15 @@ export default function PhysicsProjectPage() {
               <Card className="bg-slate-900/50 border-slate-800 backdrop-blur-sm hover:border-blue-500/40 transition-colors duration-300 h-full">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-6">
-                    <div className="shrink-0 w-20 h-20 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center">
-                      <User className="w-10 h-10 text-blue-400" />
+                    <div className="shrink-0 w-20 h-20 rounded-2xl overflow-hidden border border-slate-700 bg-slate-800">
+                      <Image
+                        src={asset(author.photo)}
+                        alt={author.name}
+                        width={80}
+                        height={80}
+                        unoptimized
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="space-y-3 min-w-0">
                       <h3 className="text-xl font-bold text-slate-100 leading-snug">{author.name}</h3>
@@ -378,38 +543,77 @@ export default function PhysicsProjectPage() {
 
       {/* ── 6. BITÁCORA ─────────────────────────────────────────────────────── */}
       <ScrollSection className="py-20 px-4 max-w-4xl mx-auto border-t border-slate-800/50">
-        <h2 className="text-3xl font-bold text-slate-100 mb-12 text-center flex items-center justify-center gap-3">
-          <Construction className="text-blue-500" /> Bitácora de Montaje
+        <h2 className="text-3xl font-bold text-slate-100 mb-4 text-center flex items-center justify-center gap-3">
+          <Flame className="text-blue-500" /> Bitácora de Proyecto
         </h2>
+        <p className="text-slate-300 text-center text-lg font-medium mb-3 max-w-2xl mx-auto">
+          {bitacoraIntro.title}
+        </p>
+        <p className="text-slate-400 text-center mb-10 max-w-2xl mx-auto leading-relaxed">
+          {bitacoraIntro.plan}
+        </p>
 
-        <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-800 before:to-transparent">
-          {bitacora.map((item, i) => (
-            <motion.div
-              key={item.step}
-              initial={{ opacity: 0, rotateX: -25, y: 40 }}
-              whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
-              transition={{
-                type: 'spring',
-                stiffness: 90,
-                damping: 20,
-                delay: i * 0.1,
-              }}
-              viewport={{ once: false, amount: 0.3 }}
-              style={{ perspective: 900, transformOrigin: 'center top' }}
-              className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
-            >
-              {/* Step bubble */}
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-blue-500/30 bg-slate-950 text-blue-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-semibold text-sm">
-                {item.step}
-              </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ type: 'spring', stiffness: 80, damping: 18 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="mb-14 max-w-2xl mx-auto"
+        >
+          <BitacoraMedia items={bitacoraIntro.media} />
+        </motion.div>
 
-              {/* Content */}
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-blue-500/30 transition-colors duration-300">
-                <h3 className="font-bold text-slate-100 text-lg mb-2">{item.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{item.body}</p>
-              </div>
-            </motion.div>
-          ))}
+        <div className="space-y-14">
+          {bitacoraSections.map((section, sectionIdx) => {
+            const SectionIcon = section.icon
+            return (
+              <motion.div
+                key={section.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 80,
+                  damping: 18,
+                  delay: sectionIdx * 0.05,
+                }}
+                viewport={{ once: false, amount: 0.15 }}
+              >
+                <h3 className="text-2xl font-bold text-slate-100 mb-6 flex items-center gap-3">
+                  <SectionIcon className="w-6 h-6 text-blue-400 shrink-0" />
+                  {section.title}
+                </h3>
+
+                <div className="space-y-6">
+                  {section.items.map((item, itemIdx) => (
+                    <motion.div
+                      key={`${section.title}-${itemIdx}`}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 80,
+                        damping: 18,
+                        delay: itemIdx * 0.08,
+                      }}
+                      viewport={{ once: false, amount: 0.2 }}
+                      className="p-6 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-blue-500/30 transition-colors duration-300"
+                    >
+                      {'title' in item && item.title && (
+                        <h4 className="font-semibold text-blue-300 text-base mb-2">
+                          {item.title}
+                        </h4>
+                      )}
+                      <p className="text-slate-400 text-sm leading-relaxed">{item.body}</p>
+                      {'media' in item && item.media && (
+                        <BitacoraMedia items={item.media} />
+                      )}
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            )
+          })}
         </div>
       </ScrollSection>
 
