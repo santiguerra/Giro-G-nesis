@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/Giro-G-nesis",
+  // basePath removed for root deployment
 };
 
 export default nextConfig;
