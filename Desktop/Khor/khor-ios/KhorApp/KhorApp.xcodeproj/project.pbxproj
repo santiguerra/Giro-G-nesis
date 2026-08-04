@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02C86B27F49925470722E041 /* KhorFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0BB3795CCF11E27875A435 /* KhorFonts.swift */; };
+		044BDC45E35D08BB76F85040 /* CoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428D35C815191E8F2E4E570 /* CoachView.swift */; };
+		0A12C14AA16E90365B496C90 /* NutritionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D4115073565D21C02F9842 /* NutritionViewModel.swift */; };
+		11596B13F15F65A1237A046A /* KhorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD4CA1D0A9E2B79299281B /* KhorButtons.swift */; };
+		11F6D0D27D81AEFE24D66DB4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8D6C00F9AB36957AB2E089 /* AppState.swift */; };
+		1B6B9039AD2981F7479A0253 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8993BE73CB75EFB5BCAEA2B5 /* OnboardingView.swift */; };
+		1F098F8367727DE9BD792D05 /* ExercisePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE56BA94F3DE6111130779 /* ExercisePickerView.swift */; };
+		22E16ED83D1CAF46E2430832 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E0E0C2578FC64C9DBBE6B7 /* UserProfile.swift */; };
+		269E5860DD695D09E53DFD3E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEBE12B83DFA388EA9BC723 /* SettingsView.swift */; };
+		325AF9FCE271A8E1FB95786F /* GeminiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644FAC68DC561E018D2BA742 /* GeminiService.swift */; };
+		366903FD5E4048A78AC3D074 /* CoachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ECA7F9FFB0C1C1DAD22C6F /* CoachViewModel.swift */; };
+		370C9C3C31EC39D98B019E9E /* NutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0506F5C809EFD55180A9A9 /* NutritionView.swift */; };
+		3919F12F02D03814EE753588 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0CCA9E43004B5D1BEEDCD6D0 /* FirebaseFirestore */; };
+		3BB09D9C2695B292FFFDF148 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5710EA8491D4790868269C61 /* SplashView.swift */; };
+		40282D4E3C325B1D97D6CAAC /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852D3F5C75A1DB1683441817 /* WorkoutRepository.swift */; };
+		4A224A2A5CCE3BEEFC572272 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C054C21747F8E5F96FE997C /* ForgotPasswordView.swift */; };
+		4CBF7DE2BF51C14361E7AAE8 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A7DA3ADCA0EDA13A1C512 /* DashboardView.swift */; };
+		50B7AA9177A3B8F00F495E45 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC478F526D09D963E0A1535C /* SignUpView.swift */; };
+		56796EE4740447C568FDC87E /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233894F419F6134DFED98D82 /* Exercise.swift */; };
+		682AF96575EE0ED4342679F5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57603E1860560CE119EFC1 /* AuthService.swift */; };
+		6EF1CBA2A82C1D46F73916D0 /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B6A8CA66949BF5EE2E091 /* WorkoutViewModel.swift */; };
+		6F829EEB0515CE77A70B53AD /* KhorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8774159E51AD34AA95C00 /* KhorTextField.swift */; };
+		70696A33C6C5C293E1AC1E52 /* NutritionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBDDC35A58730D8D18DEDC /* NutritionRepository.swift */; };
+		7864F976F12AF59C7A2D4865 /* AuthFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFBEC0609DAC86CC665DD1 /* AuthFlowView.swift */; };
+		78F663E788D890D14CE554A0 /* Nutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912BA681DFC19658B6622FC /* Nutrition.swift */; };
+		7CAF6712F52DC3F493E9D2EC /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ACE3C096F70A59F931AC0E /* ProgressView.swift */; };
+		7DEF79582751587B5FA84A9F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 29DC3A0DD380E7D35C345885 /* FirebaseAuth */; };
+		83EC68B6D6F1397D7678F5A5 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C972E5A51FF0DC37F3CFDCB5 /* WorkoutView.swift */; };
+		86CB945E036650A399DF8A03 /* KhorColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E9C07B0C81559CEC8EE16 /* KhorColors.swift */; };
+		88EF186AB52A980B98EC8BA8 /* KhorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4F080643AADCAFDC6BCD0C /* KhorApp.swift */; };
+		908F39D7CF7E241D49643DE7 /* ActiveWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEADA71857571D44DA700229 /* ActiveWorkoutView.swift */; };
+		9170A442516F6DBE1AD07D73 /* AddMealSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0181EDB67E1850501AA9CE79 /* AddMealSheet.swift */; };
+		95ABECD4973683724B2BDF65 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0F4621B879D4E3C5A24ED /* LoginView.swift */; };
+		9CCD9299AE7F0A24BAC6471F /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AF8241DD83F7935A62DE57 /* RootView.swift */; };
+		9DFBDB38A5BA28A08454EF31 /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244CB268621BA2DA388A9B1C /* ProgressViewModel.swift */; };
+		9EBEB0EF67FF94056AF7C82B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31045BC08848910735294D90 /* Workout.swift */; };
+		A4076586FC3EE90688C267B1 /* UserProfileSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06105F5692C92275F360EE /* UserProfileSetupView.swift */; };
+		B673BFEE4753119874CB7D99 /* KhorCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02521DE79B071151FB028980 /* KhorCard.swift */; };
+		B6A441E46539A6FD0B77D65F /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9BCBD76389764C9A23BAC9 /* DashboardViewModel.swift */; };
+		C3196197148400D69FCAA79A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF647C9621A54C5F8D9A5BE2 /* MainTabView.swift */; };
+		CFEFD10DC442E9243D80487B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CF79FA49096903E5A90729AF /* FirebaseAnalytics */; };
+		D0D91579EA2EE7667896162E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86820D29513A1001122305F1 /* AppDelegate.swift */; };
+		E64873E119CD597456C1B9D8 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A1BA6D14BA95208667442795 /* GoogleSignIn */; };
+		F17C93960EAE146A943D6E45 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA3521D8586F0BC76E24AC1 /* WorkoutDetailView.swift */; };
+		F599E0F3AF1A3FBE859A310C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48B5397EE77B7BD43346D79 /* AuthViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		015C931DB5C45372ED753C5F /* KhorApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = KhorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0181EDB67E1850501AA9CE79 /* AddMealSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealSheet.swift; sourceTree = "<group>"; };
+		02521DE79B071151FB028980 /* KhorCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhorCard.swift; sourceTree = "<group>"; };
+		0428D35C815191E8F2E4E570 /* CoachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachView.swift; sourceTree = "<group>"; };
+		07DBDDC35A58730D8D18DEDC /* NutritionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionRepository.swift; sourceTree = "<group>"; };
+		0FAFBEC0609DAC86CC665DD1 /* AuthFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowView.swift; sourceTree = "<group>"; };
+		1CD8774159E51AD34AA95C00 /* KhorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhorTextField.swift; sourceTree = "<group>"; };
+		233894F419F6134DFED98D82 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		244CB268621BA2DA388A9B1C /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
+		2A8D6C00F9AB36957AB2E089 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		31045BC08848910735294D90 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		3A9BCBD76389764C9A23BAC9 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		46AF8241DD83F7935A62DE57 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		5710EA8491D4790868269C61 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		5D0506F5C809EFD55180A9A9 /* NutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionView.swift; sourceTree = "<group>"; };
+		5E0BB3795CCF11E27875A435 /* KhorFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhorFonts.swift; sourceTree = "<group>"; };
+		5EEBE12B83DFA388EA9BC723 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		61DE56BA94F3DE6111130779 /* ExercisePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePickerView.swift; sourceTree = "<group>"; };
+		62ACE3C096F70A59F931AC0E /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		644FAC68DC561E018D2BA742 /* GeminiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiService.swift; sourceTree = "<group>"; };
+		852D3F5C75A1DB1683441817 /* WorkoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepository.swift; sourceTree = "<group>"; };
+		86820D29513A1001122305F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8993BE73CB75EFB5BCAEA2B5 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		8C054C21747F8E5F96FE997C /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		9FBD4CA1D0A9E2B79299281B /* KhorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhorButtons.swift; sourceTree = "<group>"; };
+		A29E9C07B0C81559CEC8EE16 /* KhorColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhorColors.swift; sourceTree = "<group>"; };
+		A912BA681DFC19658B6622FC /* Nutrition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrition.swift; sourceTree = "<group>"; };
+		AC478F526D09D963E0A1535C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		AEADA71857571D44DA700229 /* ActiveWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWorkoutView.swift; sourceTree = "<group>"; };
+		B8E0E0C2578FC64C9DBBE6B7 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		BB06105F5692C92275F360EE /* UserProfileSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSetupView.swift; sourceTree = "<group>"; };
+		BBA3521D8586F0BC76E24AC1 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
+		BD4F080643AADCAFDC6BCD0C /* KhorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhorApp.swift; sourceTree = "<group>"; };
+		BE57603E1860560CE119EFC1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		C7ECA7F9FFB0C1C1DAD22C6F /* CoachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewModel.swift; sourceTree = "<group>"; };
+		C972E5A51FF0DC37F3CFDCB5 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		CDB0F4621B879D4E3C5A24ED /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CF647C9621A54C5F8D9A5BE2 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		D03B6A8CA66949BF5EE2E091 /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
+		D48B5397EE77B7BD43346D79 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		ED8A7DA3ADCA0EDA13A1C512 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		F8D4115073565D21C02F9842 /* NutritionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB58FDB1F2120BD966018EB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DEF79582751587B5FA84A9F /* FirebaseAuth in Frameworks */,
+				3919F12F02D03814EE753588 /* FirebaseFirestore in Frameworks */,
+				CFEFD10DC442E9243D80487B /* FirebaseAnalytics in Frameworks */,
+				E64873E119CD597456C1B9D8 /* GoogleSignIn in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089D79DAE0A2D664152E40A0 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				07DBDDC35A58730D8D18DEDC /* NutritionRepository.swift */,
+				852D3F5C75A1DB1683441817 /* WorkoutRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		0F232D886030EDC6C1BCBDB5 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		14A2069E34A1C4F2B4C87411 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				233894F419F6134DFED98D82 /* Exercise.swift */,
+				A912BA681DFC19658B6622FC /* Nutrition.swift */,
+				B8E0E0C2578FC64C9DBBE6B7 /* UserProfile.swift */,
+				31045BC08848910735294D90 /* Workout.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1610E34B572924C9D2317C2D /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
+		2B961F9E3BC8D3E71BC997B5 /* Coach */ = {
+			isa = PBXGroup;
+			children = (
+				0428D35C815191E8F2E4E570 /* CoachView.swift */,
+				C7ECA7F9FFB0C1C1DAD22C6F /* CoachViewModel.swift */,
+			);
+			path = Coach;
+			sourceTree = "<group>";
+		};
+		2DB978A05C9BFD95C3E32FCE /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				86231C18C3357CB801D01D6E /* Analytics */,
+				2B961F9E3BC8D3E71BC997B5 /* Coach */,
+				FD5998B5B02FFDD47E044B2F /* Dashboard */,
+				954BA351B0811A90F1D2F877 /* Nutrition */,
+				49EA9EB71748D719DC2C1C41 /* Onboarding */,
+				BB8F7FC2AEF910ABC996FE57 /* Plans */,
+				E84D5B77E267EC892A6695FC /* Progress */,
+				92ECD977404EC83DD8311672 /* Settings */,
+				D6B9573CB34C4CE0820FF124 /* Workout */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		2F04B9C79E3BDB1B5A6CFDE6 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CF647C9621A54C5F8D9A5BE2 /* MainTabView.swift */,
+				46AF8241DD83F7935A62DE57 /* RootView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		376E901A6253B99A2F3BC86D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3FFB3BBC4C3AB03F3B683FBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				015C931DB5C45372ED753C5F /* KhorApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49EA9EB71748D719DC2C1C41 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8993BE73CB75EFB5BCAEA2B5 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		4D5E63AE448C6C8B90A27DDB /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		5C3851A0AD4BAC3270651A48 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				A29E9C07B0C81559CEC8EE16 /* KhorColors.swift */,
+				5E0BB3795CCF11E27875A435 /* KhorFonts.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		60FEE9B8DE3A94D1B9EB6D87 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD4CA1D0A9E2B79299281B /* KhorButtons.swift */,
+				02521DE79B071151FB028980 /* KhorCard.swift */,
+				1CD8774159E51AD34AA95C00 /* KhorTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6F93071A869C0CBFD0EA3BBA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				60FEE9B8DE3A94D1B9EB6D87 /* Components */,
+				2F04B9C79E3BDB1B5A6CFDE6 /* Navigation */,
+				5C3851A0AD4BAC3270651A48 /* Theme */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		77247DA8660C44A7F7F26E43 /* KhorApp */ = {
+			isa = PBXGroup;
+			children = (
+				9719E793391C89C9D5E7B9C6 /* App */,
+				F22C8E223EC83C6FCBD0C1BD /* Auth */,
+				F88BD1A1A122FF0CCAE36F56 /* Core */,
+				B8A41B7F6FF4BC9603F76B76 /* Data */,
+				2DB978A05C9BFD95C3E32FCE /* Features */,
+				6F93071A869C0CBFD0EA3BBA /* UI */,
+				4D5E63AE448C6C8B90A27DDB /* Workers */,
+			);
+			path = KhorApp;
+			sourceTree = "<group>";
+		};
+		86231C18C3357CB801D01D6E /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		92ECD977404EC83DD8311672 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5EEBE12B83DFA388EA9BC723 /* SettingsView.swift */,
+				BB06105F5692C92275F360EE /* UserProfileSetupView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		954BA351B0811A90F1D2F877 /* Nutrition */ = {
+			isa = PBXGroup;
+			children = (
+				0181EDB67E1850501AA9CE79 /* AddMealSheet.swift */,
+				5D0506F5C809EFD55180A9A9 /* NutritionView.swift */,
+				F8D4115073565D21C02F9842 /* NutritionViewModel.swift */,
+			);
+			path = Nutrition;
+			sourceTree = "<group>";
+		};
+		9719E793391C89C9D5E7B9C6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				86820D29513A1001122305F1 /* AppDelegate.swift */,
+				2A8D6C00F9AB36957AB2E089 /* AppState.swift */,
+				BD4F080643AADCAFDC6BCD0C /* KhorApp.swift */,
+				5710EA8491D4790868269C61 /* SplashView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B8A41B7F6FF4BC9603F76B76 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0F232D886030EDC6C1BCBDB5 /* Local */,
+				089D79DAE0A2D664152E40A0 /* Repository */,
+				1610E34B572924C9D2317C2D /* Sync */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BB8F7FC2AEF910ABC996FE57 /* Plans */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plans;
+			sourceTree = "<group>";
+		};
+		D6B9573CB34C4CE0820FF124 /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				AEADA71857571D44DA700229 /* ActiveWorkoutView.swift */,
+				61DE56BA94F3DE6111130779 /* ExercisePickerView.swift */,
+				BBA3521D8586F0BC76E24AC1 /* WorkoutDetailView.swift */,
+				C972E5A51FF0DC37F3CFDCB5 /* WorkoutView.swift */,
+				D03B6A8CA66949BF5EE2E091 /* WorkoutViewModel.swift */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		E84D5B77E267EC892A6695FC /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				62ACE3C096F70A59F931AC0E /* ProgressView.swift */,
+				244CB268621BA2DA388A9B1C /* ProgressViewModel.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		EC803F5CC907EB266C583569 = {
+			isa = PBXGroup;
+			children = (
+				77247DA8660C44A7F7F26E43 /* KhorApp */,
+				3FFB3BBC4C3AB03F3B683FBB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED3D8A39F0D8B084DC6F351D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BE57603E1860560CE119EFC1 /* AuthService.swift */,
+				644FAC68DC561E018D2BA742 /* GeminiService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F22C8E223EC83C6FCBD0C1BD /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0FAFBEC0609DAC86CC665DD1 /* AuthFlowView.swift */,
+				D48B5397EE77B7BD43346D79 /* AuthViewModel.swift */,
+				8C054C21747F8E5F96FE997C /* ForgotPasswordView.swift */,
+				CDB0F4621B879D4E3C5A24ED /* LoginView.swift */,
+				AC478F526D09D963E0A1535C /* SignUpView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		F88BD1A1A122FF0CCAE36F56 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				14A2069E34A1C4F2B4C87411 /* Models */,
+				376E901A6253B99A2F3BC86D /* Networking */,
+				ED3D8A39F0D8B084DC6F351D /* Services */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FD5998B5B02FFDD47E044B2F /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				ED8A7DA3ADCA0EDA13A1C512 /* DashboardView.swift */,
+				3A9BCBD76389764C9A23BAC9 /* DashboardViewModel.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4D75FE3F10716A1B15068AE /* KhorApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE2FB03B6012FB30DA04BC09 /* Build configuration list for PBXNativeTarget "KhorApp" */;
+			buildPhases = (
+				22E5C285D5BA7DF691E7A3E0 /* Sources */,
+				CB58FDB1F2120BD966018EB1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KhorApp;
+			packageProductDependencies = (
+				29DC3A0DD380E7D35C345885 /* FirebaseAuth */,
+				0CCA9E43004B5D1BEEDCD6D0 /* FirebaseFirestore */,
+				CF79FA49096903E5A90729AF /* FirebaseAnalytics */,
+				A1BA6D14BA95208667442795 /* GoogleSignIn */,
+			);
+			productName = KhorApp;
+			productReference = 015C931DB5C45372ED753C5F /* KhorApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B388729CF39D2378BFB88774 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					F4D75FE3F10716A1B15068AE = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = FEF41B3C4DD988AAFC462C35 /* Build configuration list for PBXProject "KhorApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = EC803F5CC907EB266C583569;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				70995A7571A4F576CCDC5E66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				74D47D1ACD89E15C5A1796A8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 3FFB3BBC4C3AB03F3B683FBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4D75FE3F10716A1B15068AE /* KhorApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22E5C285D5BA7DF691E7A3E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				908F39D7CF7E241D49643DE7 /* ActiveWorkoutView.swift in Sources */,
+				9170A442516F6DBE1AD07D73 /* AddMealSheet.swift in Sources */,
+				D0D91579EA2EE7667896162E /* AppDelegate.swift in Sources */,
+				11F6D0D27D81AEFE24D66DB4 /* AppState.swift in Sources */,
+				7864F976F12AF59C7A2D4865 /* AuthFlowView.swift in Sources */,
+				682AF96575EE0ED4342679F5 /* AuthService.swift in Sources */,
+				F599E0F3AF1A3FBE859A310C /* AuthViewModel.swift in Sources */,
+				044BDC45E35D08BB76F85040 /* CoachView.swift in Sources */,
+				366903FD5E4048A78AC3D074 /* CoachViewModel.swift in Sources */,
+				4CBF7DE2BF51C14361E7AAE8 /* DashboardView.swift in Sources */,
+				B6A441E46539A6FD0B77D65F /* DashboardViewModel.swift in Sources */,
+				56796EE4740447C568FDC87E /* Exercise.swift in Sources */,
+				1F098F8367727DE9BD792D05 /* ExercisePickerView.swift in Sources */,
+				4A224A2A5CCE3BEEFC572272 /* ForgotPasswordView.swift in Sources */,
+				325AF9FCE271A8E1FB95786F /* GeminiService.swift in Sources */,
+				88EF186AB52A980B98EC8BA8 /* KhorApp.swift in Sources */,
+				11596B13F15F65A1237A046A /* KhorButtons.swift in Sources */,
+				B673BFEE4753119874CB7D99 /* KhorCard.swift in Sources */,
+				86CB945E036650A399DF8A03 /* KhorColors.swift in Sources */,
+				02C86B27F49925470722E041 /* KhorFonts.swift in Sources */,
+				6F829EEB0515CE77A70B53AD /* KhorTextField.swift in Sources */,
+				95ABECD4973683724B2BDF65 /* LoginView.swift in Sources */,
+				C3196197148400D69FCAA79A /* MainTabView.swift in Sources */,
+				78F663E788D890D14CE554A0 /* Nutrition.swift in Sources */,
+				70696A33C6C5C293E1AC1E52 /* NutritionRepository.swift in Sources */,
+				370C9C3C31EC39D98B019E9E /* NutritionView.swift in Sources */,
+				0A12C14AA16E90365B496C90 /* NutritionViewModel.swift in Sources */,
+				1B6B9039AD2981F7479A0253 /* OnboardingView.swift in Sources */,
+				7CAF6712F52DC3F493E9D2EC /* ProgressView.swift in Sources */,
+				9DFBDB38A5BA28A08454EF31 /* ProgressViewModel.swift in Sources */,
+				9CCD9299AE7F0A24BAC6471F /* RootView.swift in Sources */,
+				269E5860DD695D09E53DFD3E /* SettingsView.swift in Sources */,
+				50B7AA9177A3B8F00F495E45 /* SignUpView.swift in Sources */,
+				3BB09D9C2695B292FFFDF148 /* SplashView.swift in Sources */,
+				22E16ED83D1CAF46E2430832 /* UserProfile.swift in Sources */,
+				A4076586FC3EE90688C267B1 /* UserProfileSetupView.swift in Sources */,
+				9EBEB0EF67FF94056AF7C82B /* Workout.swift in Sources */,
+				F17C93960EAE146A943D6E45 /* WorkoutDetailView.swift in Sources */,
+				40282D4E3C325B1D97D6CAAC /* WorkoutRepository.swift in Sources */,
+				83EC68B6D6F1397D7678F5A5 /* WorkoutView.swift in Sources */,
+				6EF1CBA2A82C1D46F73916D0 /* WorkoutViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		690C20D8E5607DC190A19806 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = KhorApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.khor.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		6FC6D664A8FBC88B314B342D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = KhorApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.khor.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		D4C95042A6B95989B4E91512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = KhorApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.khor.app;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F198995917EF5F0A5D964480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = KhorApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.khor.app;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE2FB03B6012FB30DA04BC09 /* Build configuration list for PBXNativeTarget "KhorApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C95042A6B95989B4E91512 /* Debug */,
+				F198995917EF5F0A5D964480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FEF41B3C4DD988AAFC462C35 /* Build configuration list for PBXProject "KhorApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FC6D664A8FBC88B314B342D /* Debug */,
+				690C20D8E5607DC190A19806 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		70995A7571A4F576CCDC5E66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		74D47D1ACD89E15C5A1796A8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0CCA9E43004B5D1BEEDCD6D0 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70995A7571A4F576CCDC5E66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		29DC3A0DD380E7D35C345885 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70995A7571A4F576CCDC5E66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A1BA6D14BA95208667442795 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74D47D1ACD89E15C5A1796A8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		CF79FA49096903E5A90729AF /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70995A7571A4F576CCDC5E66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B388729CF39D2378BFB88774 /* Project object */;
+}
